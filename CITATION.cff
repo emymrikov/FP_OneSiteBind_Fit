@@ -12,7 +12,7 @@ authors:
 version: 1.0.0
 date-released: "2026-11-24"
 license: MIT
-repository-code: "https://github.com/YOUR-USERNAME/FP_OneSiteBind_Fit"
+repository-code: "https://github.com/emymrikov/FP_OneSiteBind_Fit"
 keywords:
   - fluorescence anisotropy
   - equilibrium binding
