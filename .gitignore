@@ -1,0 +1,13 @@
+# Origin project files — never commit raw data
+*.opju
+*.opj
+*.bkf
+*Backup*/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS / editor
+Thumbs.db
+.DS_Store

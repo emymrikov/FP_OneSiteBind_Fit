@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+# This file contains machine-readable citation metadata (GitHub displays it
+# automatically and offers a "Cite this repository" button).
+title: FP_OneSiteBind_Fit
+type: software
+message: >-
+  If you use this script, please cite it as below. If you use the
+  FP_OneSiteBind fitting model in published research, please also cite the
+  referenced article.
+authors:
+  - name: FP_OneSiteBind_Fit contributors
+version: 1.0.0
+date-released: "2026-11-24"
+license: MIT
+repository-code: "https://github.com/YOUR-USERNAME/FP_OneSiteBind_Fit"
+keywords:
+  - fluorescence anisotropy
+  - equilibrium binding
+  - binding affinity
+  - OriginPro
+  - curve fitting
+  - Kd
+abstract: >-
+  An OriginPro Python script for batch fitting of fluorescence anisotropy
+  binding data with the user-defined fitting function FP_OneSiteBind.
+  Concatenated fitting of replicate Y columns per sample with automatic
+  report parsing, summary tables, and styled per-sample graphs.
+references:
+  - type: article
+    title: >-
+      Molecular Determinants of Selective and High-affinity Binding of the
+      Scaffold Protein PDZK1 to the Urate Transporter URAT1
+    authors:
+      - family-names: Mymrikov
+        given-names: E. V.
+      - family-names: Wirth
+        given-names: C.
+      - family-names: Heinicke
+        given-names: J. I.
+      - family-names: Goll
+        given-names: J.
+      - family-names: Kern
+        given-names: B. A.
+      - family-names: Steck
+        given-names: C.
+      - family-names: Iaroslavtceva
+        given-names: A. K.
+      - family-names: Mühlethaler
+        given-names: T.
+      - family-names: Köttgen
+        given-names: A.
+      - family-names: Hunte
+        given-names: C.
+    journal: Journal of Molecular Biology
+    volume: "438"
+    issue: "5"
+    pages: "169615"
+    year: 2026
+    doi: 10.1016/j.jmb.2025.169615
+    url: https://pubmed.ncbi.nlm.nih.gov/41453723/

@@ -1,0 +1,114 @@
+﻿
+
+[General Information]
+Function Name = FP_OneSiteBind
+Brief Description = One-site binding with ligand depletion (Morrison equation). Fits a fluorescence anisotropy titration A(L): A = Amin - fB*(Amin-Amax), where fB = (Kd+P+L-sqrt((Kd+P+L)^2-4*P*L))/(2*P) is the bound fraction of the labeled probe P titrated with the binding partner L. Assumes 1:1 equilibrium binding; P must be fixed at the total probe concentration in the same units as L and Kd.
+Function Source = N/A
+Number Of Parameters = 4
+Function Type = User-Defined
+Function Form = Equations
+Path = 
+Number Of Independent Variables = 1
+Number Of Dependent Variables = 1
+Category = User Defined|EC50
+FunctionPrev = NewFunction
+Function Model = Explicit
+Analytical Derivatives for User-Defined = 0
+
+
+[Fitting Parameters]
+Names = Amin,Amax,Kd,P
+Initial Values = 50(V),300(V),1(V),0.05(F)
+Meanings = Anisotropy of free probe,Anisotropy of fully bound probe,Dissociation constant,Total labeled probe concentration
+Lower Bounds = 0(I, On),0(X, On),0(X, On),0(X, On)
+Upper Bounds = --(I, Off),--(I, Off),--(I, Off),--(I, Off)
+Naming Method = User-Defined
+Number Of Significant Digits = 0,0,0,0
+Unit = mAu,mAu,uM,uM
+Format = --,--,--,--
+CustomDisplay = --,--,--,--
+
+
+[Independent Variables]
+L = 
+
+
+[Dependent Variables]
+A = 
+
+
+[Formula]
+A=Amin-(((Kd+P+L)-((Kd+P+L)^2-4*P*L)^0.5)/2/P)*(Amin-Amax)
+
+
+[Initializations]
+
+
+[After Fitting]
+
+
+[Controls]
+General Linear Constraints = 0
+Initialization Scripts = 0
+Scripts After Fitting = 0
+Number Of Duplicates = N/A
+Duplicate Offset = N/A
+Duplicate Unit = N/A
+Generate Curves After Fitting = 1
+Curve Point Spacing = Uniform on X-Axis Scale
+Generate Peaks After Fitting = 1
+Generate Peaks During Fitting = 1
+Generate Peaks with Baseline = 1
+Paste Parameters to Plot After Fitting = 1
+Paste Parameters to Notes Window After Fitting = 1
+Generate Residuals After Fitting = 0
+Keep Parameters = 0
+Compile On Param Change Script = 1
+Enable Parameters Initialization = 1
+Treat All Numbers As Double = 1
+Use Initial Formula = 1
+AllowInitializingFixedParameters = 0
+
+
+[Compile Function]
+Compile = 1
+Compile Parameters Initialization = 1
+OnParamChangeScriptsEnabled = 0
+
+
+[Parameters Initialization]
+Amin = 50;
+Amax = 300;
+Kd = 1;
+
+
+[Origin C Function Header]
+
+
+[Origin C Parameter Initialization Header]
+
+
+[Derived Parameter Settings]
+Unit = 
+Names = 
+Meanings = 
+
+
+[References]
+
+
+[LabTalk Functions Definition and Initializations]
+
+
+[Constants]
+
+
+[Constraints]
+
+
+[QuickCheck]
+L=1
+Amin=50
+Amax=300
+Kd=10
+P=0.05
