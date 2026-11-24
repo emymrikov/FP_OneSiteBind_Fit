@@ -8,7 +8,8 @@ message: >-
   FP_OneSiteBind fitting model in published research, please also cite the
   referenced article.
 authors:
-  - name: FP_OneSiteBind_Fit contributors
+  - family-names: Mymrikov
+    given-names: Evgeny V.
 version: 1.0.0
 date-released: "2026-11-24"
 license: MIT
