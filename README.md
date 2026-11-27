@@ -1,21 +1,15 @@
 # FP_OneSiteBind_Fit
 
 An OriginPro Python script for batch fitting of **fluorescence anisotropy**
-(FA) binding data with the user-defined fitting function `FP_OneSiteBind`.
+(FA)/**fluorescence polarization** (FP) binding data with the user-defined fitting function `FP_OneSiteBind`.
 
 For each sample, all replicate Y columns are **concatenated and fitted
 together** (one shared parameter set per sample), and the script produces a
-results summary, smooth fit curves, and one styled graph per sample.
+results summary, fit curves, and one styled graph per sample.
 Fitting, result extraction, and graph generation are automated — no manual
 interaction with the NLFit dialog is required. Initial setup (installing
 the fitting function, preparing the worksheet and template graph) is still
 necessary, see [Quick start](#quick-start).
-
-> **Anisotropy vs polarization.** Fluorescence anisotropy (FA) and
-> fluorescence polarization (FP) are related but *distinct* observables.
-> This script expects **anisotropy** values (in mAu = millianisotropy,
-> i.e. anisotropy × 1000). If your raw data are polarization values,
-> convert them to anisotropy before fitting.
 
 ## The model
 
@@ -101,7 +95,7 @@ For each sample the script:
    stays untouched and the clone gets a fresh short name (Graph2, Graph3, ...)
 2. Sets the clone's Long Name to `<sample>_graph`
 3. Removes all plots from the clone's first layer and adds this sample's
-   replicate datasets plus the smooth fit curve
+   replicate datasets plus the fit curve
 4. Applies the full styling: dataset colors (black/red/blue/green/orange,
    cycled), circle symbols, 3-pt black fit line, log X axis fixed to
    1e-4–100, top/right axis lines, font sizes, line-only legend
@@ -156,7 +150,7 @@ per sample:
   `GROUP_SIZE`, default 4 = X + 3 Y). This fallback cannot represent
   variable replicate counts — designate your X columns instead.
 - The **sample name** is taken from the Long Name (or Comments) of the
-  block's first Y column (e.g. `WT`, `N6K`, ...).
+  block's first Y column.
 
 ## Quick start
 
@@ -182,7 +176,7 @@ per sample:
 
 | Output | Description |
 |--------|-------------|
-| `FitCurves` sheet | smooth fit curve for every sample as (X, Fit) column pairs |
+| `FitCurves` sheet | fit curve for every sample as (X, Fit) column pairs |
 | `FP_Summary` sheet | one row per sample: Sample \| Kd \| Kd SE \| Amax \| Amax SE \| Amin \| Amin SE \| R² \| Status |
 | one graph per sample | clone of the template graph (see [The template graph](#the-template-graph)), Long Name `<sample>_graph` |
 
@@ -221,7 +215,7 @@ All user settings are in the `USER SETTINGS` block at the top of the script:
 | `X_FROM` / `X_TO` | 0.0001 / 100 | fixed X axis display range |
 | `TEMPLATE_GRAPH` | `'Graph1'` | graph used as the style template; `''` = plain new graphs |
 | `GROUP_SIZE` | `4` | fallback layout (X + GROUP_SIZE−1 Y) only when no X column is designated |
-| `N_FIT_POINTS` | `300` | points in each smooth fit curve |
+| `N_FIT_POINTS` | `300` | points in each fit curve |
 | `KEEP_REPORTS` | `False` | keep the fit report sheets created by this run |
 | `CLEANUP_PREVIOUS` | `True` | remove leftover `FPTmp` temp sheets before running |
 | `SAVE_PROJECT` | `False` | save the `.opju` when done |
